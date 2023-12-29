@@ -1,0 +1,29 @@
+.users-table {
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .table-title {
+            margin: 0;
+        }
+
+        .searchbar-text {
+            padding: 12px 12px 12px 40px;
+            border-radius: 10px;
+            transition: border 0.3s, box-shadow 0.3s;
+            border: 1px solid #ccc;
+
+            &:hover {
+               border-color: #007bff;
+            }
+            
+            
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+    }
+}

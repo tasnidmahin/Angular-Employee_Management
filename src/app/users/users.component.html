@@ -28,6 +28,7 @@
 
 <p-table
     #dt
+    class="users-table"
     [value]="employeeList"
     [rows]="10"
     [rowsPerPageOptions]="[5, 10, 20]"
@@ -40,11 +41,11 @@
     [showCurrentPageReport]="true"
 >
     <ng-template pTemplate="caption">
-        <div class="flex align-items-center justify-content-between">
-            <h5 class="m-0">Manage Employees</h5>
+        <div class="header-container">
+            <h5 class="table-title">Manage Employees</h5>
             <span class="p-input-icon-left">
                 <i class="pi pi-search"></i>
-                <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Search..." />
+                <input pInputText type="text" class="searchbar-text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Search..." />
             </span>
         </div>
     </ng-template>
