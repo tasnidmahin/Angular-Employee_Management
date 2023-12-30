@@ -67,7 +67,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-employee>
-        <tr>
+        <tr class="table-body">
             <td>
                 <p-tableCheckbox [value]="employee"></p-tableCheckbox>
             </td>
@@ -83,7 +83,7 @@
                 <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
             </td> -->
             <td>
-                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProfile(employee)"></button>
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success edit-icon" (click)="editProfile(employee)"></button>
                 <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProfile(employee)"></button>
             </td>
         </tr>
