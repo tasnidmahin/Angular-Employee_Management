@@ -35,4 +35,8 @@ export class UsersComponent implements OnInit{
   deleteProfile(employee: Employee) {
 
   }
+
+  openNew() {
+    
+  }
 }
