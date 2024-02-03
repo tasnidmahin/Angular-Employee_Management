@@ -19,7 +19,7 @@ export class UsersDataService {
         .set('size', size.toString());
 
     return this.http.get<PaginatedResponse<Employee>>(this.baseUrl, { params });
-}
+  }
 
   getEmployeeCount(): Observable<any> {
     return this.http.get(`${this.baseUrl}/count`)
