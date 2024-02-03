@@ -3,7 +3,7 @@ import { UsersDataService } from './users-data.service';
 import { Employee } from './models/employee.model';
 
 @Component({
-  selector: 'app-users',
+  selector: 'aem-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
@@ -15,13 +15,13 @@ export class UsersComponent implements OnInit{
   constructor(private usersDataService: UsersDataService) {}
 
   ngOnInit(): void {
-    this.loadUsers()
+    this.loadUsers();
   }
 
   loadUsers() {
     this.usersDataService.getEmployeeList().subscribe(response => {
       this.employeeList = response.content;
-    })
+    });
 
     this.usersDataService.getEmployeeCount().subscribe(response => {
       this.employeeCount = response.count;
