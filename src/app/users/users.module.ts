@@ -5,10 +5,17 @@ import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { UsersProfileComponent } from './users-profile/users-profile.component';
+import { ProfileComponent } from '../common/components/profile/profile.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [UsersComponent, UsersProfileComponent],
-  imports: [UsersRoutingModule, CommonModule, TableModule, ButtonModule]
+  imports: [
+    UsersRoutingModule, 
+    CommonModule, 
+    TableModule, 
+    ButtonModule,
+    ProfileComponent
+  ]
 })
 export class UsersModule {}
